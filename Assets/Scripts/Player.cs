@@ -49,9 +49,7 @@ public class Player : MonoBehaviour
         }
         Move(5);
 
-        
-
-
+       
     }
 
     public void DecreaseMentalHealth(int value)
