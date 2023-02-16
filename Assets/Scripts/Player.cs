@@ -13,12 +13,12 @@ public class Player : MonoBehaviour
 
     public Animator animator;
 
-    private bool isWalking = false;
+    //private bool isWalking = false;
 
 
     public MentalHealthBar mentalHealthBar;
 
-    bool hitBoundary = false;
+    //bool hitBoundary = false;
     //GameObject[] walls;
 
     // Start is called before the first frame update
