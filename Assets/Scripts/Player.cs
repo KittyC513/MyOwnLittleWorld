@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
 
@@ -17,9 +18,11 @@ public class Player : MonoBehaviour
 
 
     public MentalHealthBar mentalHealthBar;
+    public Actionpoint actionPoint;
 
     //bool hitBoundary = false;
     //GameObject[] walls;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,8 @@ public class Player : MonoBehaviour
 
         //walls = GameObject.FindGameObjectsWithTag("Walls");
 
+
+
     }
 
     // Update is called once per frame
@@ -48,8 +53,7 @@ public class Player : MonoBehaviour
 
         }
         Move(5);
-
-       
+        
     }
 
     public void DecreaseMentalHealth(int value)
@@ -67,7 +71,6 @@ public class Player : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
     }
-
 
 
 

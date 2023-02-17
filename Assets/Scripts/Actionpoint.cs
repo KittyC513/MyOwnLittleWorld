@@ -14,10 +14,15 @@ public class Actionpoint : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public GameObject bed;
+    public GameObject laptop;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        energy = 1;
+        numOfenergy = 3;
     }
 
     // Update is called once per frame
@@ -25,7 +30,12 @@ public class Actionpoint : MonoBehaviour
     {
         if(energy <= 0)
         {
-            
+            laptop.SetActive(false);
+
+        }else if(energy > 0)
+        {
+
+            laptop.SetActive(true);
         }
 
         if(energy > numOfenergy)

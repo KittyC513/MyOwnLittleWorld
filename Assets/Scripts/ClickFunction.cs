@@ -7,14 +7,20 @@ public class ClickFunction : MonoBehaviour
     public GameObject laptop;
     public GameObject laptopUI;
     public GameObject sleepUI;
+    public DateCount dateCount;
+    public Actionpoint actionPoint;
 
-    int timeOfClick;
+    public GameObject bottomBar;
+
+    public GameObject bed;
+
+ 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        timeOfClick = 0;
+
     }
 
 
@@ -24,30 +30,36 @@ public class ClickFunction : MonoBehaviour
 
     void Update()
     {
-        //if mouse-left button is pressed, it will raycast a position from mouse to detect if the mouse is clicking an object
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // position to the mouse
-            
-            RaycastHit2D hit2d = Physics2D.GetRayIntersection(ray);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // position to the mouse
 
-            if (hit2d.collider != null && hit2d.collider.gameObject.tag == "Laptop" && timeOfClick < 1)
+        RaycastHit2D hit2d = Physics2D.GetRayIntersection(ray);
+
+        //if mouse-left button is pressed, it will raycast a position from mouse to detect if the mouse is clicking an object
+        if (Input.GetMouseButtonDown(1))
+        {
+
+            if (hit2d.collider != null && hit2d.collider.gameObject.tag == "Laptop" && actionPoint.energy >= 1)
             {
                 Debug.Log(99);
                 laptopUI.SetActive(true);
-                
-                timeOfClick++;
-                Debug.Log(timeOfClick);
-
-            } else if (hit2d.collider != null && hit2d.collider.gameObject.tag == "Bed" && timeOfClick >= 1)
-            {
-                sleepUI.SetActive(true);
-                Debug.Log(999);
- 
+                bottomBar.SetActive(true);
+                actionPoint.energy -= 1;
             }
 
 
+            if (hit2d.collider != null && hit2d.collider.gameObject.tag == "Bed" && actionPoint.energy < 1)
+            {
+                //sleepUI.SetActive(true);
+                dateCount.dayValue += 1;
+                actionPoint.energy = 3;
+                Debug.Log(999);
+                bottomBar.SetActive(false);
+
+            }
+
         }
+
+
     }
 }
 
