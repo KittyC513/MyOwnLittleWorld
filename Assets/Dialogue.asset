@@ -229,7 +229,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: '[var=Chat.NumCollected]/1 completed'
+      value: '[var=Conversation.NumCollected]/1 completed'
       type: 0
       typeString: 
   - id: 3
@@ -283,7 +283,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: '[var=Video.NumCollected]/1 posted'
+      value: '[var=Video.NumCollected]/1 completed'
       type: 0
       typeString: 
   locations:
@@ -308,6 +308,48 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 2
+    fields:
+    - title: Name
+      value: Match
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 3
+    fields:
+    - title: Name
+      value: Conversation
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: Video
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
     - title: Description
       value: 
       type: 0
@@ -607,7 +649,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Camera(default,roombackground (1))
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
@@ -778,7 +820,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: Camera(default,Alarm)
         type: 0
         typeString: 
       - title: 
@@ -1015,7 +1057,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: Camera(default,Character)
         type: 0
         typeString: 
       - title: 
@@ -1831,7 +1873,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30.943398
-        y: 1070
+        y: 1071
         width: 160
         height: 30
     - id: 23
@@ -1978,7 +2020,7 @@ MonoBehaviour:
         value: 'now, you can move around in your room.
 
           [em1][Click the
-          floor to move][/em1]'
+          floor to move][/em1] then [em1] [Click Laptop][/em1]'
         type: 0
         typeString: 
       - title: Sequence
@@ -1996,13 +2038,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 2
-        originDialogueID: 25
-        destinationConversationID: 3
-        destinationDialogueID: 0
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -2015,8 +2051,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 896.41547}
-    canvasZoom: 1.06
+    canvasScrollPosition: {x: 3.296692, y: 0}
+    canvasZoom: 0.9100001
   - id: 3
     fields:
     - title: Title
@@ -2111,7 +2147,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("Chat with friends") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2145,7 +2181,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[em1][Click Laptop][/em1]'
+        value: You did it
         type: 0
         typeString: 
       - title: Sequence
@@ -2172,7 +2208,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 260
-        y: 126
+        y: 123
         width: 160
         height: 30
     entryGroups: []
