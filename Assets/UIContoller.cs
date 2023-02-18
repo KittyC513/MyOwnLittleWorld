@@ -9,6 +9,10 @@ public class UIContoller : MonoBehaviour
     public GameObject tokTok;
 
     public GameObject desktop;
+    public GameObject cC;
+    public GameObject loC;
+    public GameObject tT;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,4 +44,51 @@ public class UIContoller : MonoBehaviour
     {
         desktop.SetActive(false);
     }
+
+    public void TurnOffChatChat()
+    {
+        chatChat.SetActive(false);
+    }
+
+    public void TurnOffToktokt()
+    {
+        tokTok.SetActive(false);
+    }
+
+    public void TurnOffLoc()
+    {
+        loc.SetActive(false);
+    }
+
+    public void BlockChatChat()
+    {
+        cC.SetActive(false);
+    }
+
+    public void BlocktokTok()
+    {
+        tT.SetActive(false);
+    }
+
+    public void BlockloC()
+    {
+        loC.SetActive(false);
+    }
+
+    public void ActivatecC()
+    {
+        cC.SetActive(true);
+    }
+
+    public void ActivateloC()
+    {
+        loC.SetActive(true);
+    }
+
+    public void ActivatetokTok()
+    {
+        tT.SetActive(true);
+    }
+
+
 }

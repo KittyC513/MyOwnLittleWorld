@@ -6,6 +6,8 @@ public class DateCount : MonoBehaviour
 {
     public int dayValue = 1;
     Text date;
+
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,14 @@ public class DateCount : MonoBehaviour
     void Update()
     {
         date.text = "DAY " + dayValue;
+    }
+
+
+    public void PassADay(int value)
+    {
+        dayValue += value;
+        date.text = "DAY " + dayValue;
+        player.actionPoint.energy = 3;
+
     }
 }

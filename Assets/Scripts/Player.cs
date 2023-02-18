@@ -58,7 +58,13 @@ public class Player : MonoBehaviour
 
     public void DecreaseMentalHealth(int value)
     {
-        currentValue -= value;
+        currentValue += value;
+        mentalHealthBar.SetValue(currentValue);
+    }
+
+    public void IncreaseMentalHealth(int value)
+    {
+        currentValue += value;
         mentalHealthBar.SetValue(currentValue);
     }
 

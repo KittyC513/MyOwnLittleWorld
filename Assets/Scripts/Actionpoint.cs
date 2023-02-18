@@ -17,25 +17,42 @@ public class Actionpoint : MonoBehaviour
     public GameObject bed;
     public GameObject laptop;
 
+    public GameObject cc;
+    public GameObject loc;
+    public GameObject tt;
+
 
     // Start is called before the first frame update
     void Start()
     {
         energy = 1;
         numOfenergy = 3;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(energy <= 0)
+        if(energy <1)
         {
             laptop.SetActive(false);
+            cc.SetActive(false);
+            loc.SetActive(false);
+            tt.SetActive(false);
+            bed.GetComponent<PixelCrushers.DialogueSystem.Usable>().enabled.Equals(true);
+            Debug.Log(bed);
 
-        }else if(energy > 0)
+        }
+        else if(energy >= 1)
         {
 
             laptop.SetActive(true);
+            laptop.SetActive(true);
+            cc.SetActive(true);
+            loc.SetActive(true);
+            tt.SetActive(true);
+            Debug.Log(bed);
+
         }
 
         if(energy > numOfenergy)
@@ -61,10 +78,13 @@ public class Actionpoint : MonoBehaviour
             }
         }
     }
-
+    
     public void ReducePoint(int value)
     {
         energy -= value;
+        Debug.Log(energy);
     }
+
+
 
 }

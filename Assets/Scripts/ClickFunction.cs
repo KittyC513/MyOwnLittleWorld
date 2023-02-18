@@ -13,7 +13,11 @@ public class ClickFunction : MonoBehaviour
     public GameObject bottomBar;
 
     public GameObject bed;
+    public Player player;
 
+    public GameObject cc;
+    public GameObject loc;
+    public GameObject tt;
  
 
 
@@ -43,17 +47,22 @@ public class ClickFunction : MonoBehaviour
                 Debug.Log(99);
                 laptopUI.SetActive(true);
                 bottomBar.SetActive(true);
-                actionPoint.energy -= 1;
+  
             }
 
 
             if (hit2d.collider != null && hit2d.collider.gameObject.tag == "Bed" && actionPoint.energy < 1)
             {
                 //sleepUI.SetActive(true);
-                dateCount.dayValue += 1;
-                actionPoint.energy = 3;
-                Debug.Log(999);
+                //actionPoint.energy = 3;
+                //Debug.Log(999);
                 bottomBar.SetActive(false);
+                player.IncreaseMentalHealth(5);
+
+                cc.SetActive(true);
+                loc.SetActive(true);
+                tt.SetActive(true);
+
 
             }
 

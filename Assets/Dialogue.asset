@@ -2130,7 +2130,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Play League of Champions.
+        value: Play League of Champions
         type: 0
         typeString: 
       - title: Sequence
@@ -2192,7 +2192,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Create a new video on Toktok.(Incompleted)
+        value: Create a new video on Toktok
         type: 0
         typeString: 
       - title: Sequence
@@ -2254,7 +2254,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Get in touch with your friends on ChatChat.(Incompleted)
+        value: Get in touch with your friends on ChatChat
         type: 0
         typeString: 
       - title: Sequence
@@ -2350,7 +2350,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1.2071533}
+    canvasScrollPosition: {x: 0, y: 896.5011}
     canvasZoom: 0.85000014
   - id: 3
     fields:
